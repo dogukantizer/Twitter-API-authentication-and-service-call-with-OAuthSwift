@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IgF-bT-sh6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="aWO-Er-kfY">
+            <objects>
+                <viewController id="IgF-bT-sh6" customClass="MainViewController" customModule="TwitterApi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0QS-ZV-miL"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcb-lS-2iT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R7E-S7-ILp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLT-3u-eCk">
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-Vm-kVq">
+                                        <rect key="frame" x="157.5" y="15" width="60" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="DQF-nQ-WT8"/>
+                                            <constraint firstAttribute="height" constant="36" id="MKa-uX-QAv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="auth"/>
+                                        <connections>
+                                            <action selector="loginClick:" destination="IgF-bT-sh6" eventType="touchUpInside" id="RbG-Pi-QLc"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPh-lb-7TX">
+                                        <rect key="frame" x="87.5" y="101" width="200" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="40q-FC-h4p"/>
+                                            <constraint firstAttribute="height" constant="35" id="Jhm-Ih-arK"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-no-r1C">
+                                        <rect key="frame" x="101" y="144" width="173" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="9kK-y4-w7K"/>
+                                            <constraint firstAttribute="width" constant="173" id="k0e-cp-hjX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="find user's followers"/>
+                                        <connections>
+                                            <action selector="findFollowers:" destination="IgF-bT-sh6" eventType="touchUpInside" id="OBh-HP-fVW"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Authorized" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qc-hA-dHP">
+                                        <rect key="frame" x="37.5" y="59" width="300" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="Ec1-7B-1rx"/>
+                                            <constraint firstAttribute="height" constant="24" id="dCm-0F-3I5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YCA-RS-qZc">
+                                        <rect key="frame" x="0.0" y="198" width="375" height="429"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SYb-Vm-kVq" firstAttribute="top" secondItem="kLT-3u-eCk" secondAttribute="top" constant="15" id="Bwb-kM-kMR"/>
+                                    <constraint firstItem="SYb-Vm-kVq" firstAttribute="centerX" secondItem="kLT-3u-eCk" secondAttribute="centerX" id="Fbb-85-IB9"/>
+                                    <constraint firstItem="kPh-lb-7TX" firstAttribute="top" secondItem="SYb-Vm-kVq" secondAttribute="bottom" constant="50" id="NOU-LO-WoH"/>
+                                    <constraint firstItem="3qc-hA-dHP" firstAttribute="top" secondItem="SYb-Vm-kVq" secondAttribute="bottom" constant="8" id="OLf-Bu-uyY"/>
+                                    <constraint firstItem="3qc-hA-dHP" firstAttribute="top" secondItem="SYb-Vm-kVq" secondAttribute="bottom" constant="8" id="PDq-17-RXv"/>
+                                    <constraint firstItem="3qc-hA-dHP" firstAttribute="centerX" secondItem="kLT-3u-eCk" secondAttribute="centerX" id="bU7-yt-Twk"/>
+                                    <constraint firstItem="kPh-lb-7TX" firstAttribute="centerX" secondItem="kLT-3u-eCk" secondAttribute="centerX" id="cmI-fV-fm7"/>
+                                    <constraint firstItem="iGg-no-r1C" firstAttribute="top" secondItem="kPh-lb-7TX" secondAttribute="bottom" constant="8" id="kCS-qk-Kmc"/>
+                                    <constraint firstItem="iGg-no-r1C" firstAttribute="centerX" secondItem="kLT-3u-eCk" secondAttribute="centerX" id="saX-bc-tTa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kLT-3u-eCk" firstAttribute="bottom" secondItem="zcb-lS-2iT" secondAttribute="top" id="734-eW-7n9"/>
+                            <constraint firstItem="kLT-3u-eCk" firstAttribute="trailing" secondItem="R7E-S7-ILp" secondAttribute="trailing" id="ee5-tR-f1u"/>
+                            <constraint firstItem="kLT-3u-eCk" firstAttribute="top" secondItem="0QS-ZV-miL" secondAttribute="bottom" constant="20" id="l5I-Ty-oUD"/>
+                            <constraint firstItem="kLT-3u-eCk" firstAttribute="leading" secondItem="R7E-S7-ILp" secondAttribute="leading" id="sXv-Q0-hdq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountNameText" destination="kPh-lb-7TX" id="2cn-Rc-xes"/>
+                        <outlet property="findFollowersButton" destination="iGg-no-r1C" id="ufV-Dq-c60"/>
+                        <outlet property="loginButton" destination="SYb-Vm-kVq" id="jhS-Kj-k2f"/>
+                        <outlet property="loginStatusLabel" destination="3qc-hA-dHP" id="Tbx-5a-yye"/>
+                        <outlet property="tableView" destination="YCA-RS-qZc" id="ulE-Xj-0en"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H8f-vh-CZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-602.39999999999998" y="-51.724137931034484"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,8 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'TwitterApi' do
+	pod 'Bond'
+	pod 'SwiftKeychainWrapper', '~> 3.0.1'
+  pod 'OAuthSwift', '~> 1.2.0'
+end
